@@ -9,7 +9,7 @@
 }
 
 header{
-    border-bottom: 1px solid #ececec;
+    /* border-bottom: 1px solid #ececec; */
     width: 100%;
     position: fixed;
     top: 0;
@@ -28,6 +28,10 @@ header{
     text-transform: capitalize;
     font-size: 16px;
     font-weight: 700;
+}
+
+.hamburger, #toggle{
+    display: none;
 }
 
 .navRight{
@@ -81,15 +85,6 @@ header{
     justify-content: space-between;
 }
 
-.tabLinks{
-    border-inline:2px solid #ececec ;
-    padding-left: .6rem;
-    display: flex;
-    align-items: center;
-    gap: 1.3rem;
-}
-
-
 
 .inputCont{
     margin-left: 4rem;
@@ -103,6 +98,7 @@ header{
     width: 100%;
     border: none;
     outline: none;
+    background-color: transparent;
 }
 
 .tabsLinks{
@@ -113,12 +109,12 @@ header{
     gap: 1.3rem;
 }
 
-.tabLinks > a{
+.tabsLinks > a{
     text-transform: uppercase;
     font-size: 8px;
 }
 
-.tabLinks > span{
+.tabsLinks > span{
     border-left: 2px solid #ececec;
     padding: .5rem;
     display: flex;
@@ -224,7 +220,7 @@ main{
     object-fit: cover;
 }
 .latestContent{
-    border: 2px solid #ececec;
+    border: 1px solid #ececec;
     background-color: #fff;
     max-width: 400px;
     margin: -3rem auto 0;
@@ -373,9 +369,13 @@ main{
 
 .subscription-text p > span{
     margin-left: 10px;
-    font-family: "Lato", sans-serif;
-    font-weight: 500;
-    font-style: normal;
+    /* font-family: "Lato", sans-serif; */
+    /* font-weight: 500; */
+    /* font-style: normal; */
+    font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
 }
 
 .subscription-form {
@@ -406,4 +406,115 @@ main{
 
 .subscribe-btn:hover {
     background: #069275;
+}
+
+@media(min-width: 260px) and (max-width: 420px){
+.hamburger{
+    display: block;
+    font-size: 1.3rem;
+}
+
+.innerNav > h2{
+    margin-left: 0;
+}
+
+.tabs{
+    width: 330px;
+    margin: auto;
+    /* background-color: aqua; */
+    flex-direction: column;
+}
+
+.inputCont{
+    border: 2px solid #fff;
+    width: 100%;
+    margin-left: 0;
+}
+
+.tabsLinks{
+    width: 100%;
+    gap: .5rem;
+}
+
+.tabsLinks> a{
+    font-size: 8px;
+}
+
+.tabsLinks > span{
+    padding-inline: .8rem;
+}
+
+.innerNav{
+    /* border: 2px solid red; */
+    width: 330px;
+    margin: auto;
+}
+
+.navRight{
+    display: none;
+    position: absolute;
+    width: 340px;
+    padding: 1.8rem;
+    top: 4.4rem;
+    right: 3px;
+    z-index: 1;
+    background-color: #4d5052;
+    opacity: 0.97;
+    border-bottom: 4px solid#fff;
+    transform: translate(100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+.navItems{
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    border-left: none;
+}
+
+.navItems > a{
+    width: 100%;
+    color: #000;
+    font-size: 18px;
+    padding: 0.6rem;
+    text-align: left;
+    border-bottom: 4px solid #fff;
+}
+.subscribe{
+    margin-block: 1rem;
+}
+
+#toggle:checked + .navRight{
+    display: block;
+    transform: none;
+}
+
+.generalistBlog{
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    width: 330px;
+    padding-top: 6rem;
+}
+
+.authorCard{
+    box-shadow: .3rem .3rem .3rem rgb(95, 94, 95);
+}
+
+/* .subscription-section{
+    border: 2px solid blue;
+    width: 100%;
+    margin: auto;
+}
+
+.subscription-container{
+    border: 2px solid green;
+    width: 100%;
+    margin: auto;
+}
+
+.subscription-form{
+    border: 2px solid orange;
+    width: 100%;
+    margin: auto;
+} */
 }
