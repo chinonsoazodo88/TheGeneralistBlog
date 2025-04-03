@@ -268,13 +268,17 @@ main{
     text-transform: capitalize;
 }
 
+footer{
+    width: 100%;
+}
+
 .foot{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     max-width: 1100px;
     margin: 2rem auto;
-    /* margin-top: 2rem; */
+    margin-top: 2rem;
 }
 
 .explore{
@@ -285,6 +289,13 @@ main{
 .startReading{
     font-size: 12px;
     font-weight: 100;
+}
+
+.scroll-wrapper{
+    overflow-x: auto;
+    padding-bottom: 10px;
+    scrollbar-width: thin;
+    scrollbar-color: #fff;
 }
 
 .write , .writeUp{
@@ -500,21 +511,58 @@ main{
     box-shadow: .3rem .3rem .3rem rgb(95, 94, 95);
 }
 
-/* .subscription-section{
-    border: 2px solid blue;
+footer{
+    width: 330px;
+}
+
+.scroll-wrapper{
     width: 100%;
-    margin: auto;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    scrollbar-width: thin;
+    scrollbar-color: #fff;
+}
+
+.foot{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.subscription-section{
+    width: 330px;
+    text-align: left;
+    padding: 30px;
+    background: #ececec;
+    border: 2px solid #ddd; /* Rectangular border */
+    border-radius: 3px;
+    max-width: 1100px;
+    height: 35vh;
+    margin: 40px auto;
 }
 
 .subscription-container{
-    border: 2px solid green;
     width: 100%;
-    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.subscription-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 330px;
+}
+
+.subscription-text > h2{
+    margin-left: auto;
+    font-size: 23px;
 }
 
 .subscription-form{
-    border: 2px solid orange;
+    /* border: 2px solid orange; */
     width: 100%;
-    margin: auto;
-} */
+    margin: 10px 0;
+}
 }
